@@ -1,19 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-:root {
-  --red: #E52E4D;
-  --green: #33cc95;
-  --blue: #5429CC;
-  
-  --blue-light: #6933FF;
-  
-  --text-title: #363F5F;
-  --text-body: #969CB3;
-  
-  --background: #f0f2f5;
-  --shape: #FFF;
-}
+  :root {
+    --red: #E52E4D;
+    --green: #33cc95;
+    --blue: #5429CC;
+    
+    --blue-light: #6933FF;
+    
+    --text-title: #363F5F;
+    --text-body: #969CB3;
+    
+    --background: #f0f2f5;
+    --shape: #FFF;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -46,10 +47,11 @@ export const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
-  }
-  [disabled]{
-    opacity: 0.6;
-    cursor: not-allowed;
+  
+    [disabled]  {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
   }
 
   .react-modal-overlay{
@@ -65,6 +67,7 @@ export const GlobalStyle = createGlobalStyle`
     align-items: center;
     justify-content: center;
   }
+  
   .react-modal-content{
     width: 100%;
     max-width: 576px;
@@ -72,5 +75,19 @@ export const GlobalStyle = createGlobalStyle`
     padding: 3rem;
     position: relative;
     border-radius: 0.24rem;
+  }
+
+  .react-modal-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    border: 0;
+    background: transparent;
+
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
   }
 `
